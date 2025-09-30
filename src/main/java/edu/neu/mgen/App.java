@@ -6,28 +6,28 @@ public class App {
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
     
-    // 记录开始时间
     System.out.print("Enter any word:");
+    // get the start time
     long startTime = System.currentTimeMillis();
     
-    // 读取用户输入
+    // read the user input
     String input = scanner.nextLine();
     long endTime = System.currentTimeMillis();
     
-    // 计算反应时间（秒）
+    // calculate the reaction time (seconds)
     double reactionTime = (endTime - startTime) / 1000.0;
     
-    // 检查是否输入了空字符串
+    // check if the input is an empty string
     if (input.trim().isEmpty()) {
       System.out.println("You did not enter any word");
       scanner.close();
       return;
     }
     
-    // 计算单词长度
+    // calculate the length of the word
     int wordLength = input.length();
     
-    // 分类单词
+    // classify the word
     String category;
     if (wordLength <= 5) {
       category = "short";
@@ -37,7 +37,6 @@ public class App {
       category = "long";
     }
     
-    // 输出结果
     System.out.println("Your word is " + input);
     System.out.println("It is a " + category + " word");
     System.out.println("The length of the word is " + wordLength);
