@@ -1,47 +1,65 @@
 package edu.neu.mgen;
 
-import java.util.Scanner;
+import java.util.ArrayList;
 
 public class App {
+  public static boolean canMultiply(int[][] A, int[][] B) {
+    boolean canMultiply = true;
+    int ARowSize = A.length;
+    int AColSize = A[0].length;
+    int BRowSize = B.length;
+    int BColSize = B[0].length;
+    // check column size of A and row size of B are equal
+    if (AColSize != BRowSize) {
+      canMultiply = false;
+    }
+    // check each row of A has the same column size
+    for (int i = 0; i < ARowSize; i++) {
+      if (A[i].length != AColSize) {
+        canMultiply = false;
+      }
+    }
+    // check each row of B has the same column size
+    for (int i = 0; i < BRowSize; i++) {
+      if (B[i].length != BColSize) {
+        canMultiply = false;
+      }
+    }
+    if (!canMultiply) {
+      System.out.println("A and B cannot be multiplied");
+      return false;
+    }
+    return true;
+  }
+
+  public static ArrayList<ArrayList<Integer>> multiply(int[][] A, int[][] B) {
+    if (!canMultiply(A, B)) {
+      return null;
+    }
+    int ARowSize = A.length;
+    int AColSize = A[0].length;
+    int BColSize = B[0].length;
+    ArrayList<ArrayList<Integer>> multipliedResult = new ArrayList<>();
+    for (int i = 0; i < ARowSize; i++) {
+      ArrayList<Integer> row = new ArrayList<>();
+      for (int j = 0; j < BColSize; j++) {
+        int sum = 0;
+        for (int k = 0; k < AColSize; k++) {
+          sum += A[i][k] * B[k][j];
+        }
+        row.add(sum);
+      }
+      multipliedResult.add(row);
+    }
+    return multipliedResult;
+  }
+
   public static void main(String[] args) {
-    Scanner scanner = new Scanner(System.in);
-    
-    System.out.print("Enter any word:");
-    // get the start time
-    long startTime = System.currentTimeMillis();
-    
-    // read the user input
-    String input = scanner.nextLine();
-    long endTime = System.currentTimeMillis();
-    
-    // calculate the reaction time (seconds)
-    double reactionTime = (endTime - startTime) / 1000.0;
-    
-    // check if the input is an empty string
-    if (input.trim().isEmpty()) {
-      System.out.println("You did not enter any word");
-      scanner.close();
+    int[][] A = { { 2, 3, 4 }, { 3, 4, 5 } }, B = { { 1, 2 }, { 3, 4 }, { 5, 6 } };
+    if (!canMultiply(A, B)) {
       return;
     }
-    
-    // calculate the length of the word
-    int wordLength = input.length();
-    
-    // classify the word
-    String category;
-    if (wordLength <= 5) {
-      category = "short";
-    } else if (wordLength <= 10) {
-      category = "medium";
-    } else {
-      category = "long";
-    }
-    
-    System.out.println("Your word is " + input);
-    System.out.println("It is a " + category + " word");
-    System.out.println("The length of the word is " + wordLength);
-    System.out.println("Your reaction time is " + reactionTime + " seconds");
-    
-    scanner.close();
+    ArrayList<ArrayList<Integer>> multipliedResult = multiply(A, B);
+    System.out.println(multipliedResult);
   }
 }
