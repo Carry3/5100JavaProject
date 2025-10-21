@@ -1,11 +1,8 @@
-HW10 "Inheritance, Polymorphism, Inner Classes, Abstraction, and Interface"
-Design and develop the program describing different vehicles like car, motorbike, aircraft, ship.
+HW to Chapters 11 “Troubleshooting, Handling Errors”
 
-Start with the abstract class “Vehicle” and the derived classes “Car”, “Motorbike”. “Aircraft”, “Ship”.
+All programming assignments should be submitted either as a link to the source code file(s) or as uploaded files, so the TA can check and run the code.
 
-Add the appropriate attributes and methods as you understand the problem
+Develop the following program:
 
-Run the program answering questions or addressing some issues (on your choice)
-
-Result screenshot
-<img width="1102" height="341" alt="image" src="https://github.com/user-attachments/assets/3fc95618-59d8-4f89-9646-7e293801fdc8" />
+Design and develop a program that reads from the terminal.
+Use “try … catch” to avoid any errors during the input.
