@@ -1,11 +1,7 @@
-HW to Chapters 12 “Reading, Writing Files and DB”
-Open a Notepad application on your computer, write phrase “This is my Java read test”, and save it under filename “my_test_file.txt”
-Read this file from your Java program and print the phrase in the Java terminal.
-Enter phrase “Java write test” into your Java program from the Java terminal.
-Save this phrase in the same file “my_test_file.txt” using your Java program,
-Open file “my_test_file.txt” with Notepad and make sure that your last phrase is written into the file.
-Connect to the database from your Java program and read anyone record from it,
-Modify the record in the Java program.
-Update the appropriate record in the database.
-Make sure you restore (rollback) the previous information in the database to continue your database class assignments
-<img width="696" height="361" alt="image" src="https://github.com/user-attachments/assets/e2fc3152-ffd3-4989-8df1-f0f29a2d2505" />
+Lab 2 “Classes”
+The program describes animals.
+Animals can be birds, land, fish animals
+Design and develop a program that describes the animals using their common features (like typical size, typical weight, predator or vegetarian and some other features) and features specific for fish, birds, and land animals only (like species name, number of legs, wingspan, number of fins, etc.).
+Classes “Bird”, “LandAnimal”, and “Fish” are derived from class “Animals”
+
+<img width="527" height="330" alt="image" src="https://github.com/user-attachments/assets/6a5efc78-6868-4ae9-ba8e-9cd89929f6fd" />
