@@ -9,7 +9,7 @@ import java.io.BufferedWriter;
 import java.sql.*;
 
 public class App {
-  public static void main(String[] args) {// --- 第1部分：读取文件 ---
+  public static void main(String[] args) {
     try (BufferedReader reader = new BufferedReader(new FileReader("my_test_file.txt"))) {
       String line = reader.readLine();
       System.out.println("File content: " + line);
@@ -17,7 +17,6 @@ public class App {
       System.out.println("Error reading file: " + e.getMessage());
     }
 
-    // --- 第2部分：从终端写入文件 ---
     Scanner scanner = new Scanner(System.in);
     System.out.print("Please input the phrase you want to write to the file: ");
     String phrase = scanner.nextLine();
@@ -30,7 +29,6 @@ public class App {
       System.out.println("Error writing to file: " + e.getMessage());
     }
 
-    // --- 第3部分：数据库查询 --- SCDB
     String url = "jdbc:postgresql://127.0.0.1:5432/mydb";
     String user = "myuser";
     String password = "mypassword";
