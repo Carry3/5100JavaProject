@@ -1,7 +1,4 @@
-Lab 2 “Classes”
-The program describes animals.
-Animals can be birds, land, fish animals
-Design and develop a program that describes the animals using their common features (like typical size, typical weight, predator or vegetarian and some other features) and features specific for fish, birds, and land animals only (like species name, number of legs, wingspan, number of fins, etc.).
-Classes “Bird”, “LandAnimal”, and “Fish” are derived from class “Animals”
+- Develop a program that calculates the sum of all elements of a matrix. Use loops. For example, in case of matrix {{1,2,3}, {4,5,6}}, the output should be 21 which is 1+2+3+4+5+6.
+- Initiate any matrix of any size no less than 2 x 3 in your program. Show the matrix as an output of the program. Run the program. Do not use square matrices (with the same number of rows and columns).
+- Make a screenshot of the output.
 
-<img width="527" height="330" alt="image" src="https://github.com/user-attachments/assets/6a5efc78-6868-4ae9-ba8e-9cd89929f6fd" />
