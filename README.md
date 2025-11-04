@@ -1,5 +1,8 @@
-- Develop a program that calculates the sum of all elements of a matrix. Use loops. For example, in case of matrix {{1,2,3}, {4,5,6}}, the output should be 21 which is 1+2+3+4+5+6.
-- Initiate any matrix of any size no less than 2 x 3 in your program. Show the matrix as an output of the program. Run the program. Do not use square matrices (with the same number of rows and columns).
-- Make a screenshot of the output.
+A chat application using chat windows
 
-<img width="558" height="138" alt="image" src="https://github.com/user-attachments/assets/0d61ace0-7a0d-4793-a79b-0965a9bbaff1" />
+Sign-up and login tools
+
+Two chat participants can send typed messages and receive messages.
+
+<img width="400" height="250" alt="image" src="https://github.com/user-attachments/assets/297b708a-aa32-49bb-b100-62b986b8dc98" />
+<img width="1404" height="769" alt="image" src="https://github.com/user-attachments/assets/62a1d9e3-668d-49c6-8eb0-b31c398a4e48" />
