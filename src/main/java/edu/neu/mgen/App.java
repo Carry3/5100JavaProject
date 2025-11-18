@@ -16,23 +16,23 @@ public class App extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout(10, 10));
         
-        // 创建圆形面板
+        // Create the circle panel
         circlePanel = new CirclePanel();
         circlePanel.setPreferredSize(new Dimension(300, 300));
         add(circlePanel, BorderLayout.CENTER);
         
-        // 创建控制面板
+        // Create the control panel
         JPanel controlPanel = new JPanel();
         controlPanel.setLayout(new GridLayout(2, 2, 10, 10));
         controlPanel.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 20));
         
-        // 下拉选择框
-        JLabel dropdownLabel = new JLabel("选择颜色:");
+        // Dropdown label and options
+        JLabel dropdownLabel = new JLabel("Select Color:");
         String[] colors = {"", "Red", "Blue", "Green", "Yellow", "Orange", "Purple"};
         colorDropdown = new JComboBox<>(colors);
         
-        // 输出文本框
-        JLabel outputLabel = new JLabel("当前颜色:");
+        // Output label and text field
+        JLabel outputLabel = new JLabel("Current Color:");
         outputField = new JTextField();
         outputField.setEditable(false);
         outputField.setBackground(Color.WHITE);
@@ -44,7 +44,7 @@ public class App extends JFrame {
         
         add(controlPanel, BorderLayout.SOUTH);
         
-        // 添加事件监听器
+        // Add event listener
         colorDropdown.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -90,7 +90,7 @@ public class App extends JFrame {
         circlePanel.setCircleColor(color);
     }
     
-    // 内部类：圆形绘制面板
+    // Inner class: Circle drawing panel
     class CirclePanel extends JPanel {
         private Color circleColor = null;
         
@@ -110,17 +110,17 @@ public class App extends JFrame {
             int x = (getWidth() - diameter) / 2;
             int y = (getHeight() - diameter) / 2;
             
-            // 绘制圆形边框
+            // Draw the circle border
             g2d.setColor(Color.BLACK);
             g2d.setStroke(new BasicStroke(2));
             g2d.drawOval(x, y, diameter, diameter);
             
-            // 填充颜色（如果选择了颜色）
+            // Fill the circle with color (if selected)
             if (circleColor != null) {
                 g2d.setColor(circleColor);
                 g2d.fillOval(x, y, diameter, diameter);
                 
-                // 重新绘制边框以保持清晰
+                // Redraw the border for clarity
                 g2d.setColor(Color.BLACK);
                 g2d.drawOval(x, y, diameter, diameter);
             }
